@@ -159,7 +159,7 @@
     <hr>
       <footer class="footer">
         <div class="container">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+            <p><a href=currentURL+"/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
         </div>
       </footer>
 
@@ -189,7 +189,7 @@
 
   <script type="text/javascript">
 
-    // Chosen CSS
+    // Chosen CSS  
     var config = {
       '.chosen-select'           : {},
       '.chosen-select-deselect'  : {allow_single_deselect:true},
@@ -229,15 +229,12 @@
           photo: $("#photo").val(),
           scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
         }
-
-
         // Grab the URL of the website
         var currentURL = window.location.origin;
 
         // AJAX post the data to the friends API. 
         $.post(currentURL + "/api/friends", userData, function(data){
-
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          console.log(data)
           $("#matchName").text(data.name);
           $('#matchImg').attr("src", data.photo);
 
