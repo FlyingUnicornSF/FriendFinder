@@ -177,7 +177,7 @@
         </div>
         <div class="modal-body">
           <h2 id="matchName"></h2>
-          <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          <img id="matchImg" src="#" alt="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -209,12 +209,14 @@
       var isValid = true;
       $('.form-control').each(function() {
         if ( $(this).val() === '' )
-            isValid = false;
+            //isValid = false;
+          isValid = false
       });
 
       $('.chosen-select').each(function() {
 
         if( $(this).val() === "")
+          //isValid = false
           isValid = false
       })
       return isValid;
@@ -227,21 +229,23 @@
         var userData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
-          scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+          scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
         }
         // Grab the URL of the website
         var currentURL = window.location.origin;
 
         // AJAX post the data to the friends API. 
+        
         $.post(currentURL + "/api/friends", userData, function(data){
-          console.log(data)
+
           $("#matchName").text(data.name);
           $('#matchImg').attr("src", data.photo);
 
           // Show the modal with the best match 
           $("#resultsModal").modal('toggle');
 
-        });
+        }); //$.post
+
     }
     else
     {

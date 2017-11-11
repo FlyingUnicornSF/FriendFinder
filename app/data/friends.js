@@ -1,7 +1,7 @@
 var friends = [
   {
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"BigBoned",
+    "photo":"https://i.pinimg.com/736x/c2/16/25/c2162533930ef1b9ef8d5cb3ae8ada17--lose-belly-fat-fat-cats.jpg",
     "scores":[
         5,
         1,
@@ -17,18 +17,18 @@ var friends = [
   },
     {
     "name":"Hedgehog",
-    "photo":"http://gibsters.com/gb/wp-content/uploads/2017/02/hedgehog-468228_1280-672x372.jpg",
+    "photo":"https://static.boredpanda.com/blog/wp-content/uploads/2017/10/cute-hedgehog-azuki-6-59e5aa28edca8__700.jpg",
     "scores":[
-        5,
-        4,
-        4,
         2,
         5,
         1,
-        3,
+        1,
+        2,
         5,
-        4,
-        5
+        3,
+        1,
+        2,
+        1
       ]
   }
 ];  
