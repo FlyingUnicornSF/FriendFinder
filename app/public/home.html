@@ -21,14 +21,14 @@
       <br>
 
       <div class="">
-        <a href="http://localhost:3000/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4></button></a> 
+        <a class"link-to-survey" href="#"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4></button></a> 
       </div>
 
     </div>
 
       <footer class="footer">
         <div class="container">
-            <p><a href="http://localhost:3000/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
+            <p><a class="link-to-api" href="#">API Friends List</a> | <a href="https://github.com/FlyingUnicornSF/FriendFinder">GitHub Repo</a></p>
         </div>
       </footer>
 
@@ -38,6 +38,8 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>var applink = window.location.href + "/api/freinds"; $(".link-to-api").attr("href", applink);
+var surveylink = window.location.href + "/survey"; $(".link-to-survey").attr("href", surveylink);
+</script>
 
 </html>
